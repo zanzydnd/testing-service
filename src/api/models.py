@@ -24,7 +24,7 @@ class UserManager(DjangoUserManager):
 
 
 class ServiceUser(AbstractBaseUser, PermissionsMixin):
-    object = UserManager()
+    objects = UserManager()
 
     email = models.EmailField(unique=True, null=False)
     username = models.CharField(max_length=30, unique=True)
